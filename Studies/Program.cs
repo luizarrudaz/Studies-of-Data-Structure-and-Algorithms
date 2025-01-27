@@ -1,5 +1,6 @@
 ﻿using Studies.Algorithms.Search.BinarySearch;
 using Studies.Algorithms.Search.LinearSearch;
+using Studies.Algorithms.Search.TwoCrystalBallsProblem;
 using Studies.BigO;
 
 namespace Studies;
@@ -46,6 +47,18 @@ public class Program
         //Console.WriteLine(BinarySearchExample.Binary_Search(binary, valueToFind));
         //Console.WriteLine("---------------------------------------");
 
+        // Two Crystal Balls Problem
+        //Console.WriteLine("Two Crystal Balls Problem:");
+
+        //bool[] breaks = new bool[100];
+
+        //for (int i = 75; i < breaks.Length; i++)
+        //{
+        //    breaks[i] = true;
+        //}
+
+        //int result = TwoCrystalBalls.TwoCrystalBallsSolution(breaks);
+        //Console.WriteLine($"Breaking Point Found at Index: {result}");
 
     }
 }
