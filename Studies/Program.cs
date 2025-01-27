@@ -1,6 +1,7 @@
 ﻿using Studies.Algorithms.Search.BinarySearch;
 using Studies.Algorithms.Search.LinearSearch;
 using Studies.Algorithms.Search.TwoCrystalBallsProblem;
+using Studies.Algorithms.Sorting.BubbleSort;
 using Studies.BigO;
 
 namespace Studies;
@@ -60,5 +61,17 @@ public class Program
         //int result = TwoCrystalBalls.TwoCrystalBallsSolution(breaks);
         //Console.WriteLine($"Breaking Point Found at Index: {result}");
 
+        // Bubble Sort
+        Console.WriteLine("Bubble Sort:");
+
+        int[] arr = { 1, 4, 5, 9, 7, 2, 3, 6 };
+
+        Console.Write("Array before sorting: ");
+        Console.WriteLine(string.Join(", ", arr));
+
+        BubbleSortExample.Bubble_Sort(arr);
+
+        Console.Write("Array after sorting: ");
+        Console.WriteLine(string.Join(", ", arr));
     }
 }
