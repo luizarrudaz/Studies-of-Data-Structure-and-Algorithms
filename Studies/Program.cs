@@ -3,6 +3,7 @@ using Studies.Algorithms.Search.LinearSearch;
 using Studies.Algorithms.Search.TwoCrystalBallsProblem;
 using Studies.Algorithms.Sorting.BubbleSort;
 using Studies.BigO;
+using Studies.Data_Structures.LinkedList;
 
 namespace Studies;
 public class Program
@@ -76,6 +77,38 @@ public class Program
         Console.Write("Array after sorting: ");
         Console.WriteLine(string.Join(", ", arr));
         Console.WriteLine("------------------------------------------------------");
+
+        // LinkedList
+        Console.WriteLine("LinkedList: ");
+        Data_Structures.LinkedList.LinkedList<char> linkedList = new();
+
+        Node<char> a = new('A');
+        Node<char> b = new('B');
+        Node<char> c = new('C');
+        Node<char> d = new('D');
+        Node<char> e = new('E');
+
+        linkedList.AddAtFirst(e);
+        linkedList.AddAtFirst(d);
+        linkedList.AddAtFirst(c);
+        linkedList.AddAtFirst(b);
+        linkedList.AddAtFirst(a);
+
+        Console.Write("Actual list: ");
+        linkedList.PrintList();
+
+        // Insert F between B and C
+        Node<char> f = new('F');
+        linkedList.InsertAfter(b,f);
+
+        Console.WriteLine("\nList after inserting 'F' between 'B' and 'C'");
+        linkedList.PrintList();
+
+        // Delete C
+        linkedList.Delete(c);
+
+        Console.WriteLine("\nList after deleting 'C'");
+        linkedList.PrintList();
 
     }
 }
