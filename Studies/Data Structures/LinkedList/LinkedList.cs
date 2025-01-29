@@ -17,6 +17,11 @@ public class Node<T>
         Next = null;
         Prev = null;
     }
+
+    public override string ToString()
+    {
+        return Value?.ToString() ?? "null";
+    }
 }
 
 public class LinkedList<T>
@@ -102,4 +107,7 @@ public class LinkedList<T>
 
     // Returns the first node (head) of the list
     public Node<T>? GetHead() => head;
+
+    // Returns the last node (tail) of the list
+    public Node<T>? GetTail() => tail;
 }
