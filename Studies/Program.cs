@@ -110,5 +110,53 @@ public class Program
         Console.WriteLine("\nList after deleting 'C'");
         linkedList.PrintList();
 
+        // At that time, I didn't know that it could be done using Generics, but below is how it could be done.
+        /*
+            Console.WriteLine("LinkedList: ");
+            LinkedList<char> linkedList = new LinkedList<char>();
+
+            linkedList.AddFirst('E');
+            linkedList.AddFirst('D');
+            linkedList.AddFirst('C');
+            linkedList.AddFirst('B');
+            linkedList.AddFirst('A');
+
+            Console.Write("Actual list: ");
+            PrintList(linkedList);
+
+            // Insert 'F' between 'B' and 'C'
+            var nodeB = linkedList.Find('B');
+            if (nodeB != null)
+            {
+                linkedList.AddAfter(nodeB, 'F');
+            }
+
+            Console.WriteLine("\nList after inserting 'F' between 'B' and 'C'");
+            PrintList(linkedList);
+
+            // Delete 'C'
+            var nodeC = linkedList.Find('C');
+            if (nodeC != null)
+            {
+                linkedList.Remove(nodeC);
+            }
+
+            Console.WriteLine("\nList after deleting 'C'");
+            PrintList(linkedList);
+        }
+
+        static void PrintList(LinkedList<char> list)
+        {
+            foreach (var item in list)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
+        }
+         */
+        
+        Console.WriteLine("------------------------------------------------------");
+
+        // Queue
     }
 }
