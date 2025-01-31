@@ -4,6 +4,7 @@ using Studies.Algorithms.Search.TwoCrystalBallsProblem;
 using Studies.Algorithms.Sorting.BubbleSort;
 using Studies.BigO;
 using Studies.Data_Structures.LinkedList;
+using Studies.DataStructures.Queue;
 
 namespace Studies;
 public class Program
@@ -80,13 +81,13 @@ public class Program
 
         // LinkedList
         Console.WriteLine("LinkedList: ");
-        Data_Structures.LinkedList.LinkedList<char> linkedList = new();
+        LinkedListExample<char> linkedList = new();
 
-        Node<char> a = new('A');
-        Node<char> b = new('B');
-        Node<char> c = new('C');
-        Node<char> d = new('D');
-        Node<char> e = new('E');
+        Data_Structures.LinkedList.Node<char> a = new('A');
+        Data_Structures.LinkedList.Node<char> b = new('B');
+        Data_Structures.LinkedList.Node<char> c = new('C');
+        Data_Structures.LinkedList.Node<char> d = new('D');
+        Data_Structures.LinkedList.Node<char> e = new('E');
 
         linkedList.AddAtFirst(e);
         linkedList.AddAtFirst(d);
@@ -98,7 +99,7 @@ public class Program
         linkedList.PrintList();
 
         // Insert F between B and C
-        Node<char> f = new('F');
+        Data_Structures.LinkedList.Node<char> f = new('F');
         linkedList.InsertAfter(b,f);
 
         Console.WriteLine("\nList after inserting 'F' between 'B' and 'C'");
@@ -158,5 +159,70 @@ public class Program
         Console.WriteLine("------------------------------------------------------");
 
         // Queue
+        Console.WriteLine("Queue: ");
+        QueueExample<char> queue = new();
+
+        queue.Enqueue('A');
+        queue.Enqueue('B');
+        queue.Enqueue('C');
+        queue.Enqueue('D');
+        queue.Enqueue('E');
+
+        
+        Console.WriteLine("Actual Queue: ");
+        queue.PrintQueue();
+
+        Console.WriteLine();
+        Console.WriteLine("Queue Length: " + queue.Length);
+        Console.WriteLine("Queue Peek: " + queue.Peek());
+        Console.WriteLine("\n");
+
+        queue.Dequeue();
+
+        Console.WriteLine("Queue after dequeue method: ");
+        queue.PrintQueue();
+
+        Console.WriteLine();
+        Console.WriteLine("Queue Length: " + queue.Length);
+        Console.WriteLine("Queue Peek: " + queue.Peek());
+
+        // Queue using Generics:
+        /*
+            Console.WriteLine("Queue: ");
+            Queue<char> queue = new();
+
+            queue.Enqueue('A');
+            queue.Enqueue('B');
+            queue.Enqueue('C');
+            queue.Enqueue('D');
+            queue.Enqueue('E');
+
+            Console.WriteLine("Actual Queue: ");
+            PrintQueue(queue);
+
+            Console.WriteLine();
+            Console.WriteLine("Queue Length: " + queue.Count);
+            Console.WriteLine("Queue Peek: " + queue.Peek());
+            Console.WriteLine("\n");
+
+            queue.Dequeue();
+
+            Console.WriteLine("Queue after dequeue method: ");
+            PrintQueue(queue);
+
+            Console.WriteLine();
+            Console.WriteLine("Queue Length: " + queue.Count);
+            Console.WriteLine("Queue Peek: " + queue.Peek());
+        }
+
+        static void PrintQueue(Queue<char> queue)
+        {
+            foreach (var item in queue)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
+        } 
+         */
     }
 }

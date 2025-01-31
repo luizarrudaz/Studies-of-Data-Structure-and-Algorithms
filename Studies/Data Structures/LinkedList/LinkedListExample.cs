@@ -24,7 +24,7 @@ public class Node<T>
     }
 }
 
-public class LinkedList<T>
+public class LinkedListExample<T>
 {
     private Node<T>? head; // First node in the list
     private Node<T>? tail; // Last node in the list
