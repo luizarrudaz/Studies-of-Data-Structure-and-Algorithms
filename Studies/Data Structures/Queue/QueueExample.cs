@@ -1,11 +1,11 @@
 ﻿namespace Studies.DataStructures.Queue
 {
-    public class Node<T>
+    public class QNode<T>
     {
         public T Value { get; }
-        public Node<T>? Next { get; set; }
+        public QNode<T>? Next { get; set; }
 
-        public Node(T value)
+        public QNode(T value)
         {
             Value = value;
             Next = null;
@@ -15,8 +15,8 @@
     public class QueueExample<T>
     {
         public int Length { get; private set; }
-        private Node<T>? Head;
-        private Node<T>? Tail;
+        private QNode<T>? Head;
+        private QNode<T>? Tail;
 
         public QueueExample()
         {
@@ -26,7 +26,7 @@
 
         public void Enqueue(T value)
         {
-            var newNode = new Node<T>(value); // Create a new node with the given value
+            var newNode = new QNode<T>(value); // Create a new node with the given value
 
             if (Tail == null) // If the queue is empty, both Head and Tail will point to the new node
             {
