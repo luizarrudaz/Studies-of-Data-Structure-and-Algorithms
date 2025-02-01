@@ -4,6 +4,7 @@ using Studies.Algorithms.Search.TwoCrystalBallsProblem;
 using Studies.Algorithms.Sorting.BubbleSort;
 using Studies.BigO;
 using Studies.Data_Structures.LinkedList;
+using Studies.Data_Structures.Stack;
 using Studies.DataStructures.Queue;
 
 namespace Studies;
@@ -14,7 +15,7 @@ public class Program
         // Big O Example
         Console.Write("Big O: ");
         Console.WriteLine(BigOExamples.SumCharCodes("something"));
-        Console.WriteLine("------------------------------------------------------");
+        Console.WriteLine("\n------------------------------------------------------\n");
 
         // Array Example
         Console.WriteLine("Array:");
@@ -31,7 +32,7 @@ public class Program
         //    Console.WriteLine(number);
         //}
         Console.WriteLine(string.Join(", ", numbers));
-        Console.WriteLine("------------------------------------------------------");
+        Console.WriteLine("\n------------------------------------------------------\n");
 
         // Linear Search
         Console.Write("Linear Search: ");
@@ -39,7 +40,7 @@ public class Program
         int needle = 16;
 
         Console.WriteLine(LinearSearchExample.Linear_Search(haystack, needle));
-        Console.WriteLine("------------------------------------------------------");
+        Console.WriteLine("\n------------------------------------------------------\n");
 
         // Binary Search
         Console.Write("Binary Search: ");
@@ -49,7 +50,7 @@ public class Program
         int valueToFind = 4;
 
         Console.WriteLine(BinarySearchExample.Binary_Search(binary, valueToFind));
-        Console.WriteLine("------------------------------------------------------");
+        Console.WriteLine("\n------------------------------------------------------\n");
 
         // Two Crystal Balls Problem
         Console.WriteLine("Two Crystal Balls Problem:");
@@ -63,7 +64,7 @@ public class Program
 
         int result = TwoCrystalBalls.TwoCrystalBallsSolution(breaks);
         Console.WriteLine($"Breaking Point Found at Index: {result}");
-        Console.WriteLine("------------------------------------------------------");
+        Console.WriteLine("\n------------------------------------------------------\n");
 
         // Bubble Sort
         Console.WriteLine("Bubble Sort:");
@@ -77,17 +78,17 @@ public class Program
 
         Console.Write("Array after sorting: ");
         Console.WriteLine(string.Join(", ", arr));
-        Console.WriteLine("------------------------------------------------------");
+        Console.WriteLine("\n------------------------------------------------------\n");
 
         // LinkedList
         Console.WriteLine("LinkedList: ");
         LinkedListExample<char> linkedList = new();
 
-        Data_Structures.LinkedList.Node<char> a = new('A');
-        Data_Structures.LinkedList.Node<char> b = new('B');
-        Data_Structures.LinkedList.Node<char> c = new('C');
-        Data_Structures.LinkedList.Node<char> d = new('D');
-        Data_Structures.LinkedList.Node<char> e = new('E');
+        Node<char> a = new('A');
+        Node<char> b = new('B');
+        Node<char> c = new('C');
+        Node<char> d = new('D');
+        Node<char> e = new('E');
 
         linkedList.AddAtFirst(e);
         linkedList.AddAtFirst(d);
@@ -156,7 +157,7 @@ public class Program
         }
          */
         
-        Console.WriteLine("------------------------------------------------------");
+        Console.WriteLine("\n------------------------------------------------------\n");
 
         // Queue
         Console.WriteLine("Queue: ");
@@ -224,5 +225,38 @@ public class Program
             Console.WriteLine();
         } 
          */
+
+        Console.WriteLine("\n------------------------------------------------------\n");
+
+        // Stack
+        StackExample<char> stack = new();
+
+        Console.WriteLine("Stack:");
+
+        stack.Push('A');
+        stack.Push('B');
+        stack.Push('C');
+        stack.Push('D');
+        stack.Push('E');
+
+        Console.WriteLine("Actual Stack:");
+        stack.PrintStack();
+
+        Console.WriteLine();
+        Console.WriteLine("Stack Length: " + stack.Length);
+        Console.WriteLine("Stack Peek: " + stack.Peek());
+        Console.WriteLine("\n");
+
+        stack.Pop();
+
+        Console.WriteLine("Stack after pop method: ");
+        stack.PrintStack();
+
+        Console.WriteLine();
+        Console.WriteLine("Stack Length: " + stack.Length);
+        Console.WriteLine("Stack Peek: " + stack.Peek());
+        
+        Console.WriteLine("\n------------------------------------------------------\n");
+
     }
 }
