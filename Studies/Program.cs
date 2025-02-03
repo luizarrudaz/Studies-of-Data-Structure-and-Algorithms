@@ -258,5 +258,45 @@ public class Program
         
         Console.WriteLine("\n------------------------------------------------------\n");
 
+        // Stack using Generics:
+        /*
+            Stack<char> stackChar = new Stack<char>();
+
+            Console.WriteLine("Char Stack:");
+
+            stackChar.Push('A');
+            stackChar.Push('B');
+            stackChar.Push('C');
+            stackChar.Push('D');
+            stackChar.Push('E');
+
+            Console.WriteLine("Actual Char Stack:");
+            PrintStack(stackChar);
+
+            Console.WriteLine();
+            Console.WriteLine("Char Stack Length: " + stackChar.Count);
+            Console.WriteLine("Char Stack Peek: " + (stackChar.Count > 0 ? stackChar.Peek().ToString() : "Stack is empty"));
+            Console.WriteLine("\n");
+
+            stackChar.Pop();
+
+            Console.WriteLine("Char Stack after pop method:");
+            PrintStack(stackChar);
+
+            Console.WriteLine();
+            Console.WriteLine("Char Stack Length: " + stackChar.Count);
+            Console.WriteLine("Char Stack Peek: " + (stackChar.Count > 0 ? stackChar.Peek().ToString() : "Stack is empty"));
+            Console.WriteLine("\n------------------------------------------------------\n");
+        }
+
+        static void PrintStack(Stack<char> stack)
+        {
+            Console.WriteLine("-----");
+            foreach (var item in stack)
+            {
+                Console.WriteLine($"| {item} |");
+            }
+            Console.WriteLine("-----"
+         */
     }
 }
